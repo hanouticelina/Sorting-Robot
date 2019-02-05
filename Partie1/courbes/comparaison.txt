@@ -1,0 +1,11 @@
+plot "naif.eval" using 1:2 with lines title 'algorithme naif' lt rgb "red" lw 3
+replot "circ.eval" using 1:2 with lines title 'algorithme circulaire' lt rgb "green" lw 3
+replot "coul.eval" using 1:2 with lines title 'algorithme par couleur' lt rgb "blue" lw 3
+replot "avl.eval" using 1:2 with lines title 'algorithme par AVL' lt rgb "violet" lw 3
+set title "Comparaison algorithmes au plus proche"
+set xlabel "longueur de la grille carrée"
+set ylabel "Temps (en s)"
+set term png
+set output "courbes_AuPlusProche.jpg"
+set size 1.0, 1.0
+repl
